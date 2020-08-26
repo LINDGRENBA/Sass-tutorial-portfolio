@@ -1,0 +1,13 @@
+$primary-color: #272727;
+$secondary-color: #CDA2AB;
+// $secondary-color: #9DD9D2; I like this color better - use for personal portfolio
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out; //want to re-use this, so we don't target anything
+}

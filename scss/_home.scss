@@ -1,0 +1,27 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background:   //use linear-gradient to do an overlay - looks really nice, good to use if image is too bright, also makes text easier to see
+    linear-gradient(  
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url(../img/model-1.jpg) center top; //path is as if we are in css file
+  background-size: cover;
+
+  &__name {  //same as .home__name
+        font-size: 5rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        border-bottom: 2px solid #fff;
+
+        &--last {   //same as .home__name--last
+          color: $secondary-color;
+          font-weight: 700;
+        }
+  }
+}
