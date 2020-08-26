@@ -11,3 +11,11 @@ $secondary-color: #CDA2AB;
 @mixin transition-ease {
   transition: all 0.3s ease-in-out; //want to re-use this, so we don't target anything
 }
+
+@function set-text-color($color){
+  @if(lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
