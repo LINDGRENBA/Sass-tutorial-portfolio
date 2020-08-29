@@ -64,6 +64,34 @@
   transition: all 0.3s ease-in-out;
 }
 
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+.menu-btn__burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-btn__burger.open::after {
+  width: 28px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
 body {
   background: #272727;
   color: #fff;
@@ -109,7 +137,7 @@ main .social-icons a:hover {
   color: #CDA2AB;
 }
 
-main footer {
+footer {
   font-size: 1rem;
   position: fixed;
   bottom: 0.4rem;
