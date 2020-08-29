@@ -52,3 +52,66 @@
     }
   }
 }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .menu-nav{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: $primary-color;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%); // menu-nav elements start off page at top
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0); // when .open class is added to .menu-nav, menu-nav elements move back to initial position
+    }
+
+    &__item {
+      transform: translateX(100vw); // links will start all the way off the right side of the page
+      @include transition-ease;
+
+      &.open { // when the 'open' class is added,
+        transform: translateX(0); // translate to initial position (bring them in from the right)
+      }
+
+      &.active > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: 300;
+      @include transition-ease;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) { //iterates through the links - 1st, then 2nd, then 3rd, then 4th
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
