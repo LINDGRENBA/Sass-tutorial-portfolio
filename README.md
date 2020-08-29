@@ -6,7 +6,7 @@
 
 ## Description
 
-Improve user experience and bring in more clientel with a sophisticated, mobile friendly portfolio. 
+Improve user experience and land your dream job with a sophisticated, mobile friendly portfolio to showcase your work. 
 
 ## Setup/Installation Requirements
 
