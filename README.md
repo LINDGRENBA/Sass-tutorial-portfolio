@@ -13,8 +13,7 @@ Improve user experience and land your dream job with a sophisticated, mobile fri
 * Clone this repository.
 * To view the code itself, open in a text editor such as VS Code or Atom, etc.
 * To compile Sass, you can use Node.js, gulp.js or go to VS Code extensions, search for `Live Sass Compiler`, select `install` and then select the `Watch Sass` icon on the bottom bar of VS Code.
-* To view in your browser, double click on index.html.
-* You will need to run a server to view this document.
+* To view in your browser, right click on index.html and select `Open with Live Server`.
 
 ## Known Bugs
 
